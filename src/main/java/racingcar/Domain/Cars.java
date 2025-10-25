@@ -36,11 +36,7 @@ public class Cars {
         List<String> trimNameList = makeTrimNameList(names);
         HashSet<String> uniqueNameSet = new HashSet<>(trimNameList);
 
-        if (trimNameList.size() != uniqueNameSet.size()) {
-            return false;
-        }
-
-        return true;
+        return trimNameList.size() != uniqueNameSet.size();
     }
 
     private List<String> makeTrimNameList(List<String> names) {
