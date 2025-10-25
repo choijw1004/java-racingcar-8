@@ -38,10 +38,11 @@ public class Car {
         return position == maxPosition;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public int getPosition(){
+
+    public int getPosition() {
         return position;
     }
 }
