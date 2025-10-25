@@ -59,5 +59,15 @@ public class Cars {
         }
     }
 
+    public List<String> getCurrentStatusStringList(){
+        List<String> statuses = new ArrayList<>();
+
+        for(Car car: cars){
+            statuses.add(car.getStatusString());
+        }
+
+        return statuses;
+    }
+
 
 }
