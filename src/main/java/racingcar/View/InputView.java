@@ -23,4 +23,11 @@ public class InputView {
 
         return Arrays.asList(carNames);
     }
+
+    public int readAttemptCount(){
+        System.out.println(ATTEMPT_COUNT_INPUT_MESSAGE);
+        String input = Console.readLine();
+
+        return Integer.parseInt(input);
+    }
 }
