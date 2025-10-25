@@ -15,10 +15,7 @@ public class Cars {
     private final List<Car> cars;
 
     public Cars(List<String> names) {
-        if (hasDuplicateName(names)) {
-            throw new IllegalArgumentException("중복된 이름이 있습니다.");
-        }
-
+        validateDuplicateName(names);
         this.cars = createCars(names);
     }
 
@@ -32,11 +29,13 @@ public class Cars {
         return carList;
     }
 
-    private boolean hasDuplicateName(List<String> names) {
+    private void validateDuplicateName(List<String> names) {
         List<String> trimNameList = makeTrimNameList(names);
         HashSet<String> uniqueNameSet = new HashSet<>(trimNameList);
 
-        return trimNameList.size() != uniqueNameSet.size();
+        if(trimNameList.size() != uniqueNameSet.size()){
+            throw new IllegalArgumentException("중복된 이름이 있습니다.");
+        }
     }
 
     private List<String> makeTrimNameList(List<String> names) {
