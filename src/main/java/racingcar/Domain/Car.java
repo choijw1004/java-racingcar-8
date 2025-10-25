@@ -33,6 +33,10 @@ public class Car {
     public String getStatusString(){
         return name + " : " + POSITION.repeat(position);
     }
+
+    public boolean isWinner(int maxPosition){
+        return position == maxPosition;
+    }
 }
 
 
