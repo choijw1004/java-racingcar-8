@@ -23,5 +23,12 @@ public class Car {
             throw new IllegalArgumentException("이름은 5자 이하여야 합니다.");
         }
     }
+
+    public void move(boolean canMove) {
+        if (canMove) {
+            position++;
+        }
+    }
 }
+
 
