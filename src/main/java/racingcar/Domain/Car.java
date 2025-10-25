@@ -29,6 +29,10 @@ public class Car {
             position++;
         }
     }
+
+    public String getStatusString(){
+        return name + " : " + POSITION.repeat(position);
+    }
 }
 
 
