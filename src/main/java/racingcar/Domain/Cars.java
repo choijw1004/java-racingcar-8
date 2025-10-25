@@ -1,5 +1,7 @@
 package racingcar.Domain;
 
+import camp.nextstep.edu.missionutils.Randoms;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -48,6 +50,13 @@ public class Cars {
         }
 
         return trimNameList;
+    }
+
+    public void moveCars(){
+        for(Car car : cars){
+            int randomValue = Randoms.pickNumberInRange(MIN_RANDOM, MAX_RANDOM);
+            car.move(randomValue >= MOVE_CONDITION);
+        }
     }
 
 
