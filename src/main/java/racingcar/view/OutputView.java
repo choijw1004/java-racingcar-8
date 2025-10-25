@@ -19,7 +19,7 @@ public class OutputView {
         System.out.println();
     }
 
-    public void printWinners(List<String> winners){
+    public void printWinners(List<String> winners) {
         System.out.println(WINNER_PREFIX + String.join(WINNER_DELIMITER, winners));
     }
 }

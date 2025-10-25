@@ -18,13 +18,13 @@ public class InputView {
         return splitByDelimiter(input);
     }
 
-    private List<String> splitByDelimiter(String input){
+    private List<String> splitByDelimiter(String input) {
         String[] carNames = input.split(DELIMITER);
 
         return Arrays.asList(carNames);
     }
 
-    public int readAttemptCount(){
+    public int readAttemptCount() {
         System.out.println(ATTEMPT_COUNT_INPUT_MESSAGE);
         String input = Console.readLine();
 

@@ -33,7 +33,7 @@ public class Cars {
         List<String> trimNameList = makeTrimNameList(names);
         HashSet<String> uniqueNameSet = new HashSet<>(trimNameList);
 
-        if(trimNameList.size() != uniqueNameSet.size()){
+        if (trimNameList.size() != uniqueNameSet.size()) {
             throw new IllegalArgumentException("중복된 이름이 있습니다.");
         }
     }
