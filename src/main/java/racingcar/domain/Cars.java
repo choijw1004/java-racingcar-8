@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.dto.CarStatusDto;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -55,14 +56,14 @@ public class Cars {
         }
     }
 
-    public List<String> getCurrentStatusStringList() {
-        List<String> statuses = new ArrayList<>();
+    public List<CarStatusDto> getStatusDtos() {
+        List<CarStatusDto> statusDtos = new ArrayList<>();
 
         for (Car car : cars) {
-            statuses.add(car.getStatusString());
+            statusDtos.add(new CarStatusDto(car.getName(), car.getPosition()));
         }
 
-        return statuses;
+        return statusDtos;
     }
 
     public List<String> getWinners() {

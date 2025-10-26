@@ -31,7 +31,7 @@ public class Controller {
 
         for (int attempt = 0; attempt < game.getAttemptCount(); attempt++) {
             game.startRacing();
-            outputView.printAttemptResult(game.getCurrentStatusStringList());
+            outputView.printAttemptResult(game.getStatusDtos());
         }
 
         outputView.printWinners(game.getWinners());

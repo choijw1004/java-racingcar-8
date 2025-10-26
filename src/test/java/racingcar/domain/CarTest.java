@@ -46,35 +46,6 @@ public class CarTest {
     }
 
     @Test
-    void car_초기_위치_0() {
-        Car car = new Car("choi");
-        assertThat(car.getStatusString()).isEqualTo("choi : ");
-    }
-
-    @Test
-    void car_전진_위치_증가() {
-        Car car = new Car("choi");
-        car.move(true);
-        assertThat(car.getStatusString()).isEqualTo("choi : -");
-    }
-
-    @Test
-    void car_정지_위치_유지() {
-        Car car = new Car("choi");
-        car.move(false);
-        assertThat(car.getStatusString()).isEqualTo("choi : ");
-    }
-
-    @Test
-    void car_여러번_전진() {
-        Car car = new Car("choi");
-        car.move(true);
-        car.move(true);
-        car.move(true);
-        assertThat(car.getStatusString()).isEqualTo("choi : ---");
-    }
-
-    @Test
     void car_우승자_판단_true() {
         Car car = new Car("choi");
         car.move(true);

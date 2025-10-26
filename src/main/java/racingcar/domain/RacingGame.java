@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.dto.CarStatusDto;
+
 import java.util.List;
 
 public class RacingGame {
@@ -24,8 +26,8 @@ public class RacingGame {
         cars.moveCars();
     }
 
-    public List<String> getCurrentStatusStringList() {
-        return cars.getCurrentStatusStringList();
+    public List<CarStatusDto> getStatusDtos(){
+        return cars.getStatusDtos();
     }
 
     public List<String> getWinners() {

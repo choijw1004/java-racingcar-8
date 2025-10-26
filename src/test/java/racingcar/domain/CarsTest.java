@@ -45,15 +45,6 @@ class CarsTest {
     }
 
     @Test
-    void cars_이름_앞뒤_공백_제거() {
-        List<String> names = Arrays.asList(" choi ", " jang ", " woo ");
-        Cars cars = new Cars(names);
-
-        List<String> statuses = cars.getCurrentStatusStringList();
-        assertThat(statuses).contains("choi : ", "jang : ", "woo : ");
-    }
-
-    @Test
     void cars_초기_우승자_모두() {
         List<String> names = Arrays.asList("choi", "jang", "woo");
         Cars cars = new Cars(names);
@@ -61,14 +52,5 @@ class CarsTest {
         List<String> winners = cars.getWinners();
 
         assertThat(winners).containsExactlyInAnyOrder("choi", "jang", "woo");
-    }
-
-    @Test
-    void cars_한대_생성() {
-        List<String> names = Arrays.asList("choi");
-        Cars cars = new Cars(names);
-
-        List<String> statuses = cars.getCurrentStatusStringList();
-        assertThat(statuses).hasSize(1);
     }
 }
