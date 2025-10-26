@@ -27,7 +27,7 @@ public class Application {
      */
     public static void main(String[] args) {
         try {
-            new Application().run();
+            new Application().start();
         } finally {
             Console.close();
         }
@@ -36,7 +36,7 @@ public class Application {
     /**
      * 게임을 실행하는 메서드
      */
-    public void run() {
+    public void start() {
         List<String> carNames = inputView.readCarNames();
         int attemptCount = inputView.readAttemptCount();
 
