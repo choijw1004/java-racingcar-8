@@ -23,7 +23,7 @@ public class OutputView {
         System.out.println();
     }
 
-    private String formatCarStatus(CarStatusDto status){
+    private String formatCarStatus(CarStatusDto status) {
         return status.name() + " : " + POSITION.repeat(status.position());
     }
 
