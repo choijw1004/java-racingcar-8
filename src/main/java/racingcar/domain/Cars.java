@@ -17,36 +17,19 @@ public class Cars {
 
     public Cars(List<String> names) {
         validateDuplicateName(names);
-        this.cars = createCars(names);
-    }
-
-    private List<Car> createCars(List<String> names) {
-        List<Car> carList = new ArrayList<>();
+        this.cars = new ArrayList<>();
 
         for (String name : names) {
-            carList.add(new Car(name.trim()));
+            cars.add(new Car(name));
         }
-
-        return carList;
     }
 
     private void validateDuplicateName(List<String> names) {
-        List<String> trimNameList = makeTrimNameList(names);
-        HashSet<String> uniqueNameSet = new HashSet<>(trimNameList);
+        HashSet<String> uniqueNameSet = new HashSet<>(names);
 
-        if (trimNameList.size() != uniqueNameSet.size()) {
+        if (names.size() != uniqueNameSet.size()) {
             throw new IllegalArgumentException("중복된 이름이 있습니다.");
         }
-    }
-
-    private List<String> makeTrimNameList(List<String> names) {
-        List<String> trimNameList = new ArrayList<>();
-
-        for (String name : names) {
-            trimNameList.add(name.trim());
-        }
-
-        return trimNameList;
     }
 
     public void moveCars() {
